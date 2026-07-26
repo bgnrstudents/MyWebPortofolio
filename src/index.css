@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Bebas+Neue&family=Bricolage+Grotesque:wght@400;500;600;700;800&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-primary: #0F3040;
+  --color-secondary: #0A2532;
+  --color-card: rgba(255,255,255,.08);
+  --color-border: rgba(255,255,255,.12);
+  --color-accent: #E6B85C;
+
+  --color-text-primary: #F8FAFC;
+  --color-text-secondary: #C9D5DD;
+
+  /* Fonts */
+  --font-heading: "Bebas Neue", sans-serif;
+  --font-title: "Bricolage Grotesque", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
