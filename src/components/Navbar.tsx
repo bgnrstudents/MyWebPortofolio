@@ -9,6 +9,7 @@ export default function Navbar() {
     { id: "about", label: "About" },
     { id: "projects", label: "Projects" },
     { id: "contact", label: "Contact" },
+  
   ];
   return (
     <nav className="fixed top-3 left-1/2 bg-[var(--color-secondary)]/30 -translate-x-1/2 backdrop-blur-xs rounded-full z-50 ">
