@@ -7,7 +7,7 @@ export default function Hero() {
       id="home"
       className="relative h-screen overflow-hidden bg-[var(--color-secondary)] text-[var(--color-text-primary)]"
     >
-      {/* ================= 1. AMBIENT GLOW ================= */}
+      {/* GLOW*/}
       <motion.div
         animate={{
           scale: [1, 1.15, 1],
@@ -23,7 +23,7 @@ export default function Hero() {
         className="absolute -bottom-10 left-1/3 h-[400px] w-[400px] rounded-full bg-blue-600/10 blur-[130px] pointer-events-none"
       />
 
-      {/* ================= 2. TECH GRID & NODE NETWORK ================= */}
+      {/* TECH GRID & NODE NETWORK  */}
       <div className="absolute inset-0 pointer-events-none opacity-20">
         {/* Grid Lines */}
         <div
@@ -66,13 +66,12 @@ export default function Hero() {
         </svg>
       </div>
 
-      {/* ================= 3. CORNER BRACKETS ================= */}
+      {/* CORNER BRACKETS  */}
       <div className="absolute top-6 left-6 h-24 w-24 border-l border-t border-cyan-400/15 pointer-events-none" />
       <div className="absolute top-6 right-6 h-24 w-24 border-r border-t border-purple-400/15 pointer-events-none" />
       <div className="absolute bottom-6 left-6 h-24 w-24 border-l border-b border-purple-400/15 pointer-events-none" />
       <div className="absolute bottom-6 right-6 h-24 w-24 border-r border-b border-cyan-400/15 pointer-events-none" />
 
-      {/* ================= 4. FLOATING CODE SNIPPETS (CSS ANIMATION) ================= */}
       {/* Terminal Window */}
       <div className="absolute top-20 left-[15%] z-10 font-mono text-[10px] text-slate-500/40 animate-[float_8s_ease-in-out_infinite] will-change-transform">
         <div className="flex items-center gap-2 mb-1">
@@ -101,7 +100,7 @@ export default function Hero() {
         <div className="text-green-400/60">✓ compiled successfully</div>
       </div>
 
-      {/* ================= 5. BACKGROUND TYPOGRAPHY ================= */}
+      {/* BACKGROUND TYPOGRAPHY */}
       <motion.h2
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -114,7 +113,7 @@ export default function Hero() {
         DEVELOPER
       </motion.h2>
 
-      {/* ================= 6. DESKTOP LAYOUT ================= */}
+      {/*  DESKTOP LAYOUT */}
       <div className="hidden lg:block relative h-full w-full">
         {/* MUHAMMAD */}
         <motion.div
@@ -199,8 +198,7 @@ export default function Hero() {
           {/* Primary CTA */}
           <a
             href="#projects"
-            className="group relative overflow-hidden rounded-full bg-gradient-to-r from-[var(--color-accent)] to-amber-600 px-8 py-3 font-medium text-[var(--color-secondary)] shadow-lg shadow-[var(--color-accent)]/25 transition-all hover:shadow-xl hover:shadow-[var(--color-accent)]/40 hover:scale-105"
-          >
+            className="group relative overflow-hidden rounded-full bg-gradient-to-r from-[var(--color-accent)] to-amber-600 px-8 py-3 font-medium text-[var(--color-secondary)] shadow-lg shadow-[var(--color-accent)]/25 transition-all hover:shadow-xl hover:shadow-[var(--color-accent)]/40 hover:scale-105">
             <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform duration-1000 group-hover:translate-x-full" />
             <span className="relative z-10 flex items-center gap-2">
               View My Work
@@ -246,65 +244,88 @@ export default function Hero() {
       </div>
 
       {/* ================= 7. MOBILE & TABLET LAYOUT ================= */}
-      <div className="flex lg:hidden h-full flex-col items-center justify-center px-6">
-        <motion.div
-          className="mb-4 text-center z-20"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <h1 className="font-heading uppercase leading-none tracking-tight text-[clamp(5rem,12vw,5rem)]">
-            MUHAMMAD
-          </h1>
-          <p className="mt-1 font-body uppercase tracking-[0.2em] text-xs text-[var(--color-text-secondary)]">
-            Informatics Student
-          </p>
-        </motion.div>
+      <div className="flex lg:hidden h-full items-center justify-center px-6">
+        <div className="flex flex-col items-center text-center max-w-md">
+          {/* Name */}
+          <motion.h1
+            initial={{ opacity: 0, y: 25 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="font-heading uppercase leading-[0.9] tracking-tight text-[clamp(4rem,16vw,7rem)]">MUHAMMAD
+          </motion.h1>
 
-        <motion.img
-          src={avatarImg}
-          alt="Muhammad Rizki"
-          className="w-[450px] max-w-[600px] drop-shadow-[0_25px_35px_rgba(0,0,0,.45)] select-none my-4"
-          draggable={false}
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        />
-
-        <motion.div
-          className="mt-4 text-center"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-        >
-          <h1 className="font-heading uppercase leading-none tracking-tight text-[clamp(5rem,12vw,5rem)]">
+          <motion.h1
+            initial={{ opacity: 0, y: 25 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.8,
+              delay: 0.15,
+            }}
+            className="font-heading uppercase leading-[0.9] tracking-tight text-[clamp(4rem,16vw,7rem)]">
             RIZKI
-          </h1>
-          <p className="mt-1 font-body uppercase tracking-[0.2em] text-xs text-[var(--color-text-secondary)]">
-            Web Developer
-          </p>
-        </motion.div>
+          </motion.h1>
 
-        <motion.div
-          className="absolute top-76 right-2 z-30 bg-[var(--color-secondary)]/80 backdrop-blur-sm border border-green-400/40 rounded-full px-2 py-1 shadow-xl"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, delay: 1 }}
-        >
-          <div className="flex items-center gap-2">
-            <motion.div
-              className="h-2 w-2 rounded-full bg-green-400"
-              animate={{ scale: [1, 1.2, 1] }}
-              transition={{ duration: 2, repeat: Infinity }}
-            />
-            <span className="text-xs font-small text-slate-300">
-              Available for work
-            </span>
-          </div>
-        </motion.div>
+          {/* Subtitle */}
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{
+              delay: 0.35,
+            }}
+            className="mt-3 text-sm tracking-[.35em] uppercase text-[var--color-text-secondary)]">Informatics Student • Web Developer</motion.p>
+
+          {/* Avatar */}
+          <motion.div
+            initial={{
+              opacity: 0,
+              scale: 0.85,
+              y: 25,
+            }}
+            animate={{
+              opacity: 1,
+              scale: 1,
+              y: [0, -10, 0],
+            }}
+            transition={{
+              opacity: {
+                duration: 0.8,
+                delay: 0.45,
+              },
+              scale: {
+                duration: 0.8,
+                delay: 0.45,
+              },
+              y: {
+                duration: 5,
+                repeat: Infinity,
+                ease: "easeInOut",
+              },
+            }}
+            className="my-8"
+          >
+            <img
+              src={avatarImg}
+              alt="Muhammad Rizki"
+              draggable={false}
+              className="w-[300px] max-w-[500px] drop-shadow-[0_35px_50px_rgba(0,0,0,.45)]  select-none"/>
+          </motion.div>
+
+          {/* CTA */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              delay: 0.8,
+            }}
+            className="flex w-full gap-3 sm:flex-row sm:justify-center ">
+            <a href="#projects" className="rounded-full bg-gradient-to-r from-[var(--color-accent)] to-amber-600 px-8 py-3 font-medium text-[var(--color-secondary)] shadow-lg shadow-[var(--color-accent)]/25 transition-all hover:shadow-xl hover:shadow-[var(--color-accent)]/40 hover:scale-105"> View Projects</a>
+
+            <a href="#contact" className="rounded-full border border-[var(--color-accent)]/40 bg-[var(--color-card)] backdrop-blur-sm px-8 py-3 font-medium text-[var(--color-text-primary)] transition-all hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] hover:scale-105 hover:bg-[var(--color-accent)]/10]">Contact Me</a>
+          </motion.div>
+        </div>
       </div>
 
-      {/* ================= 8. CUSTOM ANIMATIONS ================= */}
+      {/* CUSTOM ANIMATIONS */}
       <style>{`
         @keyframes float {
           0%, 100% { 
