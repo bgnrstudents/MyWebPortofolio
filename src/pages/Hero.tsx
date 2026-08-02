@@ -171,23 +171,6 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
-        <motion.div
-          className="absolute top-50 right-106 z-30 bg-[var(--color-secondary)]/80 backdrop-blur-sm border border-green-400/40 rounded-full px-4 py-2 shadow-xl"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, delay: 1 }}
-        >
-          <div className="flex items-center gap-2">
-            <motion.div
-              className="h-2 w-2 rounded-full bg-green-400"
-              animate={{ scale: [1, 1.2, 1] }}
-              transition={{ duration: 2, repeat: Infinity }}
-            />
-            <span className="text-xs font-medium text-slate-300">
-              Available for work
-            </span>
-          </div>
-        </motion.div>
 
         <motion.div
           className="absolute bottom-20 left-1/2 -translate-x-1/2 z-30 hidden lg:flex gap-4"
@@ -317,7 +300,7 @@ export default function Hero() {
             transition={{
               delay: 0.8,
             }}
-            className="flex w-full gap-3 sm:flex-row sm:justify-center ">
+            className="flex w-full gap-3 sm:flex-row sm:justify-center z-20">
             <a href="#projects" className="rounded-full bg-gradient-to-r from-[var(--color-accent)] to-amber-600 px-8 py-3 font-medium text-[var(--color-secondary)] shadow-lg shadow-[var(--color-accent)]/25 transition-all hover:shadow-xl hover:shadow-[var(--color-accent)]/40 hover:scale-105"> View Projects</a>
 
             <a href="#contact" className="rounded-full border border-[var(--color-accent)]/40 bg-[var(--color-card)] backdrop-blur-sm px-8 py-3 font-medium text-[var(--color-text-primary)] transition-all hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] hover:scale-105 hover:bg-[var(--color-accent)]/10]">Contact Me</a>
