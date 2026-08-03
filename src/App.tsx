@@ -3,7 +3,7 @@ import Hero from './pages/Hero'
 import About from './pages/About'
 import Project from './pages/Project'
 import Contact from './pages/Contact'
-import Footer from './components/footer'
+import Footer from './components/Footer'
 
 export default function App() {
   return (
