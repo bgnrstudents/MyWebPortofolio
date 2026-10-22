@@ -1,15 +1,12 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-// Ganti import sesuai gambar project lu
 import project1Img from "../assets/avatarporto.png";
 import project2Img from "../assets/avatarporto.png";
 import project3Img from "../assets/avatarporto.png";
-import project4Img from "../assets/avatarporto.png";
-import project5Img from "../assets/avatarporto.png";
 
 export default function Projects() {
-  const [hoveredProject, setHoveredProject] = useState(null);
+  const [hoveredProject, setHoveredProject] = useState<number | null>(null);
 
   const projects = [
     {
@@ -145,7 +142,7 @@ export default function Projects() {
               {/* Gradient Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-secondary)] via-[var(--color-secondary)]/40 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-500" />
 
-              {/* Project Number - Editorial Touch */}
+              {/* Project Number */}
               <div className="absolute top-4 left-4 font-heading text-5xl text-[var(--color-accent)]/30 group-hover:text-[var(--color-accent)]/60 transition-colors duration-500">
                 {String(index + 1).padStart(2, "0")}
               </div>
